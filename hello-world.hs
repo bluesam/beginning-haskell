@@ -14,7 +14,7 @@ applyTwice f x = f (f x)
 applyNTimes :: Int -> (a -> a) -> a -> a
 applyNTimes n f val = foldl (\s e -> e s) val [f | x <- [1..n]]
 
-main = do
+main = do--take care of indentation
        print (inc 4)
        print (doubleUp 7)
        print (doubleUp (inc 4))
