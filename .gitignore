@@ -33,3 +33,5 @@ cabal.project.local~
 /build
 /captures
 .externalNativeBuild
+*.directory
+vcs.xml

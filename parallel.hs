@@ -4,7 +4,7 @@ import Control.Parallel
 --main = b `par` d `par` c `pseq` print (b,"a",d, "b",c)
 --main = b `par` d `pseq` print(b, d)
 --main = print(b,d)
-main = b `par` d `par` print(b, d)
+main = b `par` d `par` print(b, d)--this does one calculates two factorials at the same time
     where
         a = ack 3 10
         b = fac 294128
