@@ -1,6 +1,8 @@
 # Ignore all
 *
 !*.*
+# Unignore all files with extensions recursively
+!**/*.*
 dist
 dist-*
 cabal-dev
