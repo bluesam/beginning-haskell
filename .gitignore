@@ -1,3 +1,6 @@
+# Ignore all
+*
+!*.*
 dist
 dist-*
 cabal-dev
