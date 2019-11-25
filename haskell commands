@@ -1,5 +1,6 @@
-type ghci in terminal to open the intreptrer for quick scripting
+sudo apt-get install haskell-platform for installing it
 type ghc -o hello hello.hs in terminal to compile
 type ./hello to run the compiled file
 type ghc -O2 --make A.hs -threaded -rtsopts to compile with -threaded and optimizations on
 type time ./A +RTS -N2 to run on on two cores and show the time it took to process the output
+type ghci in terminal to open the interpreter for quick scripting
