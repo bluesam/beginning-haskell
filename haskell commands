@@ -1,6 +1,11 @@
-sudo apt-get install haskell-platform for installing it
-type ghc -o hello hello.hs in terminal to compile
-type ./hello to run the compiled file
-type ghc -O2 --make A.hs -threaded -rtsopts to compile with -threaded and optimizations on
-type time ./A +RTS -N2 to run on on two cores and show the time it took to process the output
-type ghci in terminal to open the interpreter for quick scripting
+1) For installing the haskell platform on linux, use the command given below
+sudo apt-get install haskell-platform
+2) Type this command in terminal to compile the file hello.hs with a machine code file named hello
+ghc -o hello hello.hs
+3) Type this command to run the compiled file named hello (on Windows OS it is a bit different)
+./hello
+4) Type this command to compile a file named A.hs with -threaded and optimizations on
+ghc -O2 --make A.hs -threaded -rtsopts
+5) Type this command to run the compiled file named "A" on two cores and show the time it took to process the output
+time ./A +RTS -N2
+6) Type ghci in terminal to open the interpreter for quick scripting
