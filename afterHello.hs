@@ -12,6 +12,18 @@ main = do
        print (product listOfSomeNumbers)
        print (newList)
        print (reverse listOfSomeNumbers)
+       print (show "About now on strings")
+       print ("Now on strings")
+       print (init "We are living in Hello")
+       print (reverse ["We","are","living", "in", "hell"])
+       print (reverse ["We","are","living", "in"], ["hell"])
+       print (null "hello")
+       print ("don't do not "++"hello", "it is a type error")
+       print ((,)"Helloo" "worldd")-- to show you the infix operator works on default functions too. Here (,) is a function too.
+       print (fst (1,2))--the fst and snd work on tuples not lists
+       print (head "")--code stops running from here because of the null variable exception
+
+
 
 -- head [1,2,3,4,5]
 -- tail [1,2,3,4,5]
