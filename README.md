@@ -7,4 +7,5 @@ this one has got some good examples
 http://zvon.org/other/haskell/Outputglobal/index.html
 Derek Banas has made a good Youtube tutorial
 https://youtu.be/02_H3LjqMr8
+
 functional-programming, haskell, trying-out
