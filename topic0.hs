@@ -121,5 +121,23 @@ listTimes2 = [x *2 | x <- [1..10]]
 --u can also filter the output of operations on the members of list
 listTimes3 = [x*3 | x <- [1..20], x*3 <= 50]
 --but I can't understand the above syntax. what else could be done there?
---
+--get the output that satisfies both conditions
+divisBy9And13 = [x | x <- [1..500], x `mod` 9 == 0, x `mod` 13 ==0]
+--get the output that satisfies only one of the conditions
+divisBy9Or13 = [x | x <- [1..500], x `mod` 9 == 0 || x `mod` 13 ==0]
+--sort a list
+sortedList = sort [42, 10, 420, 44, 77, 11, 13, 2020, 1001]
+sortedList2 = sort ["yeah", "oh", "yeah"]
+--u can also add the members of two lists in matrix addition style by using zipWith
+sumOfLists = zipWith (+) [1,2,3,4,5] [6,7,8,9,10]
+-- u can also divide two lists like that
+divOfLists = zipWith (/) [10,14,25,42] [2,7,5,42]
+--filter an existing list using filter
+listBiggerThan5 = filter (>5) morePrime
+--sort of a while loop
+evensUpTo20 = takeWhile (<=20) [2,4..]
+--perform an operation on a number and do the operation on the next one using the result of previous
+--now this one may look scary and complex but here are some examples
+divOfLists2 = foldr (/) 2 [40, 8, 12, 24, 4]
+--what the foldr does is that .....to be continued, time for a break
 --consider making a new file after 100 lines

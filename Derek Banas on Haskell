@@ -54,4 +54,11 @@ can u think of curry function as method usage in its overloaded version like don
 
 how do infinite lists work in Haskell? how does laziness help it?
 
-continue watching it from 19:00 minutes.
+study advanced Haskell list filtration
+
+usage of zipWith
+
+is there a while loop in Haskell that is similar to other programming languages?
+is there a for loop in Haskell?
+
+how to use foldl and foldr in Haskell
