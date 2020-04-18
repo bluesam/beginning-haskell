@@ -1,0 +1,57 @@
+It is a functional programming language.
+Every thing in it is immutable
+Functions can be passed as a parameter to other functions
+Recursion is used very often
+Does haskell have loops?
+does it have variables like other programming languages?
+does it have constants?
+how can it do so much without the usual features?
+how is Haskell compiler strict?
+learn you a haskell is great free online book
+open terminal and run ghci by typing ghci
+type :l file-name in ghci to open a file in ghci
+type :r in ghci run everything in ghci
+use -- for single line comments
+use {--} for multi-line comments
+{-
+some comment
+another comment
+-}
+use import to import modules
+import Data.List
+import System.IO
+
+What is type inference? how does it work in Haskell?
+what is statically typed language?
+some types in haskell:
+Int -2^63 to 2^63
+
+you gotta compile it in ghci using :r before running it
+for example type this in the code
+maxInt = maxBound :: Int
+then :r in ghci
+then type maxInt in ghci and hit enter
+can't understand the syntax of the line maxInt = maxBound :: Int
+is maxInt a variaable/function here and maxBound is another function and Int is the value to the function? then what exactly :: ? what does this symbol :: do?
+
+why do all programming languages come to a fault when floats are used?
+what are single unicode characters?
+
+u can use `(back ticks) to use a better way to represent function
+back tick is called infix operator
+for example 5 `mod` 4 where mod is for getting the remainder of a division
+
+u can use :t in ghci to get the working of a function for example :t sqrt
+I don't understand this concept of :t properly. Can it also be used in code and not just ghci?
+
+lists in Haskell are single linked.
+
+why is Haskell considered a very safe language?
+
+check the list of all the built-in operations available on lists
+
+can u think of curry function as method usage in its overloaded version like done once in SimplyProgress?
+
+how do infinite lists work in Haskell? how does laziness help it?
+
+continue watching it from 19:00 minutes.

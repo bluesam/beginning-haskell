@@ -41,3 +41,4 @@ cabal.project.local~
 *.directory
 vcs.xml
 *.executable
+!Derek Banas on Haskell
