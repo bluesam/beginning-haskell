@@ -164,6 +164,31 @@ fourPlus3 = adds3 4
 --using the adds3 in for a list using map
 threePlusList = map adds3 [1,2,3,4,5]
 
+--using lambda functions
+double1To10 = map (\x -> x * 2) [1..10]
+--the \ is used to define a lambda
+--x is the input it receives and then x * 2 is the output here
+
+--comparision operators in Haskell are < > <= >= == and /= which is not equal to
+--logical operators are && || not
+
+--if statements in Haskell
+doubleEvenNumber y =
+    if (y `mod` 2 /= 0)--condition check for odd number
+    then y
+    else y*2
+
+--example of case
+getClass :: Int -> String
+getClass n = case n of
+    5 -> "Go to Kindergarten"
+    6 -> "Go to elementary school"
+    _ -> "Go away"
+-- here the underscore is the default case
+--the "of" makes it look confusing. what is the purpose of "of" here?
+
+--continue watching it from 57 minutes or 56 maybe
+
 --main function
 main = do
     putStrLn "What is ur name?"

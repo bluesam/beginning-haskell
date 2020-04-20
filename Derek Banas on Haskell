@@ -115,4 +115,11 @@ what are higher order functions in Haskell?
 
 how to use map in Haskell?
 
-what is lambda in Haskell?
+what is lambda in Haskell? is it a function that doesn't have a name?
+what are some use cases for lambda functions?
+
+is if always followed by a then in Haskell?
+
+is there a switch in haskell? or is case used without the keyword switch?
+
+what are modules in Haskell?
