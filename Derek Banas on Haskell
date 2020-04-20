@@ -65,3 +65,32 @@ how to use foldl and foldr in Haskell for complex stuff like foldl (\x y -> 2*x 
 
 what is meant by list comprehension? and why is it a very important concept?
 
+what are tuple pairs?
+
+u can use let to make functions in ghci too for example let num7 =, let getTriple x = x * 3, getTriple num7
+
+how does main function in Haskell work?
+
+is indentation important in Haskell?
+
+in order to run main from ghci mode, just call the main function by typing main and hitting enter
+in order to run main automatically in a compiled file first compile it using
+ghc --make filename
+then run it by
+./topic1
+
+what is type declaration?
+
+when to use let?
+
+why must the functions in Haskell must return something always?
+why can't the function name start with an upper case letter?
+
+any function that doesn't receive a parameter is simply a name or definition. but how and why?
+
+if Haskell can figure out type declaration itself, then why define one? is it just for making things clearer for the coder?
+or is there any other reason for it? how to know when to declare types and when not?
+
+:q for quiting ghci
+
+
