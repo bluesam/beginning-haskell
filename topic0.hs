@@ -163,5 +163,4 @@ multTable = [[x * y | y <- [1..10]] | x <- [1..13]]
 --and thus the number of sub-lists depends on the number of members in the list for x and
 --the number of elements in the sub-lists depends on the number of members in the list for y
 
-
---consider making a new file after 100 lines
+--Now finally done with lists but the file is already quite long so time for a new file called topic1.hs
