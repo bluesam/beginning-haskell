@@ -75,7 +75,46 @@ isEven n = n `mod` 2 == 0
 -- or is it based on some default behavior thing?
 --how is it related to guards in Haskell?
 
---continue watching it from 39 minutes. time for a break
+--some more stuff about guards in Haskell
+whatGrade :: Int -> String
+whatGrade age
+    | (age >=5 && age <= 6) = "Kindergarten"
+    | (age >6 && age <= 10) = "Elementary School"
+    | (age > 10 && age <= 14) = "Middle School"
+    | (age >14 && age <= 18) = "High School"
+    | otherwise = "College"
+--doesn't it all execute in an if else style?
+
+--where clause in Haskell
+batAvgRating :: Double -> Double -> String
+batAvgRating hits atBats
+    | avg <= 0.200 = "Terrible batting average"
+    | avg <= 0.250 = "Average player"
+    | avg <= 0.280 = "You are doing pretty good"
+    | otherwise = "You are a superstar"
+    where avg = hits/atBats
+
+--making functions that use lists
+getListItems :: [Int] -> String
+getListItems [] = "Your list is empty"
+getListItems (x:[]) = "Your list starts with " ++ show x
+getListItems (x:y:[]) = "Your list contains " ++ show x ++ " and " ++ show y
+getListItems (x:xs) = "The 1st item is " ++ show x ++ " and the rest is " ++ show xs
+--here the empty brackets are for the empty lists.
+--the first condition is for when the list is empty
+--the second one is for when the list contains one item, that is why it is empty [] after x
+--the third is for when the list contains two items, that is why it is empty [] after x and y
+--the the fourth is for when the list contains more than 2 items, x for the first and xs for the rest of the items
+
+--using as patterns
+getFirstItem :: String -> String
+getFirstItem [] = "Empty String"
+getFirstItem all@(x:xs) = "The first leter in " ++ all ++ " is " ++ [x]
+--can't it be done using some other way?
+--this is so confusing. I can't understand the as patterns
+--and what exactly does the all do? and why is there an @? does all combines all the elements together?
+--what is a better use case for the above concept?
+
 --main function
 main = do
     putStrLn "What is ur name?"
