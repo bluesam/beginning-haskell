@@ -93,4 +93,6 @@ or is there any other reason for it? how to know when to declare types and when 
 
 :q for quiting ghci
 
+what are non-exhaustive patterns in a function?
 
+how to use if conditions in functions?
