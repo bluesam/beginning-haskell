@@ -139,5 +139,29 @@ evensUpTo20 = takeWhile (<=20) [2,4..]
 --perform an operation on a number and do the operation on the next one using the result of previous
 --now this one may look scary and complex but here are some examples
 divOfLists2 = foldr (/) 2 [40, 8, 12, 24, 4]
---what the foldr does is that .....to be continued, time for a break
+--what the foldr does is that it starts doing the operation provided from the right of the array
+--to the left side but it first applies it using the number provided before the list.
+-- in this example, it first divides 4/2, then divides 24 by the result of the previous division
+--and then 12 by the previous result and so on until the list ends and
+--that final result is the output of the whole line that is saved in the divOfLists2
+--it is a bit complex so it takes some time getting used to it but it can be very useful sometimes
+
+--similarly there is a foldl which does the same thing but from left to the right
+multOfList = foldl (*) 1 [2, 3, 4, 5]
+--here the first number to be multiplied will be 1 by 2 which basically results in 2 since 1 x 2 = 2
+--and then 2 x 3 and so on till the list ends.
+--u can also do advanced operations on the list members because of something called list comprehension
+power3List = [3^n | n <- [1..10]]
+--here as u can see that the elements of list are provided as the value of n as shown by <-
+--u can also use two lists at a time in a multi-variable scenario
+--example of multiplication tables shown below
+multTable = [[x * y | y <- [1..10]] | x <- [1..13]]
+--now u might ask that why is the list for y inside the bracket but not the list for x
+--i am not sure about this and I don't claim to understand it properly but my guess is that
+-- it is an operation on x which is like the outer loop and the list for y is an inner loop
+--which does the operation x * y. so in other words for x in 1..10 do for y in 1..10 do x * y
+--and thus the number of sub-lists depends on the number of members in the list for x and
+--the number of elements in the sub-lists depends on the number of members in the list for y
+
+
 --consider making a new file after 100 lines

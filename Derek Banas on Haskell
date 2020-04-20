@@ -61,4 +61,7 @@ usage of zipWith
 is there a while loop in Haskell that is similar to other programming languages?
 is there a for loop in Haskell?
 
-how to use foldl and foldr in Haskell
+how to use foldl and foldr in Haskell for complex stuff like foldl (\x y -> 2*x + y) 4 [1,2,3]?
+
+what is meant by list comprehension? and why is it a very important concept?
+
