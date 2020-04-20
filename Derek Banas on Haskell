@@ -96,3 +96,7 @@ or is there any other reason for it? how to know when to declare types and when 
 what are non-exhaustive patterns in a function?
 
 how to use if conditions in functions?
+
+what are guards in Haskell?
+
+are there if and else in Haskell? are | and otherwise the equivalent of those in Haskell?

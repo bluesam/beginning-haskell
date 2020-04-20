@@ -49,10 +49,33 @@ factorial n = n * factorial (n-1)
 --Think of it as an if condition.
 --When the value passed is 0, give 1. When it is not 1, do n * factorial (n-1)
 --and now factorial calls itself until the value is finally 0.
---what I don't understand here is that how does it not process negative values. like is there a built-in safety system?
+--what I don't understand here is that how does it not process negative values when given those.
+--like is there a built-in safety system?
 --how to make a function process negative numbers?
 
+--another way to do factorial is to use product on lists
+productFactorial n = product [1..n]
+--this one won't process 0 as input because you can't make a list from 1 to 0. but why not?
+--also why can't it make a list from 1 to -3? how to make a list from -3 to 3 or from 3 to -3?
+--and if it does make a list like that then why can't it do the product? what exactly is the reason for error?
 
+--using some conditions in a function
+isOdd :: Int -> Bool
+isOdd n
+    | n `mod` 2 == 0 = False
+    | otherwise = True
+--here you can see that the conditions are defined using |
+--also the code looks too clean because there are not parenthesis in the condition check
+--what exactly is the role of | here?
+--can I use parenthesis here to make it easier to know when the condition check ends
+
+--another way to make the above function is:
+isEven n = n `mod` 2 == 0
+--how does this one return false when the given an odd number? there is no condition for odd defined there
+-- or is it based on some default behavior thing?
+--how is it related to guards in Haskell?
+
+--continue watching it from 39 minutes. time for a break
 --main function
 main = do
     putStrLn "What is ur name?"
