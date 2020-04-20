@@ -115,6 +115,55 @@ getFirstItem all@(x:xs) = "The first leter in " ++ all ++ " is " ++ [x]
 --and what exactly does the all do? and why is there an @? does all combines all the elements together?
 --what is a better use case for the above concept?
 
+--using higher order functions
+times4 :: Int -> Int
+times4 x = x * 4
+listTimes4 = map times4 [1,2,3,4,5]
+--map is a function that seems to accept another function and applies all the elements in the list to the function
+--could it be also done using a for loop like thing i.e for x in list times4?
+
+multBy4 :: [Int] -> [Int]
+multBy4 [] = []
+multBy4 (x:xs) = times4 x : multBy4 xs
+--now what happens is that it passes x to the times4 function, and then passes the rest i.e xs to itself
+--and then it gets a new x which it passes to times4 and a new xs which it passes to itself again.
+--and then when the list is finally empty, it just gives back the empty list and ends the execution
+--the above thing uses recursion to times4 all the elements of a list.
+--recursion is indeed used a lot in Haskell.
+
+--checking if strings are equal using recursion
+areStringsEq :: [Char] -> [Char] -> Bool
+areStringsEq [] [] = True
+areStringsEq (x:xs) (y:ys) = x ==y && areStringsEq xs ys
+areStringsEq _ _ = False
+-- here there are two _ separated by space because it means any two inputs that are not covered before
+--strings that have different lengths will be processed using that last case which always returns false
+--the last one sort of acts like a safety check too
+
+--passing a function to a function
+doMult :: (Int -> Int) -> Int
+--here (Int -> Int) means a function that gets an int and returns an int
+--and doMult receives a function and returns an int.
+--and the function that doMult receives is a function that receives an int and returns an int
+doMult func = func 3
+num3Times4 = doMult times4
+--now here num3Times4 gives the function times4 to the do mult function
+--now the doMult gives the number 3 to the function times4
+--times4 multiplies 3 by 4 and returns 12
+--the above thing looks cool but could it be used for something useful? right now it seems gimmicky to me
+
+--we can also make a function that returns a function
+getAddFunc :: Int -> (Int -> Int)
+--as you can see that it receives an Int and returns a function that receives and returns an Int
+getAddFunc x y = x + y
+adds3 = getAddFunc 3
+fourPlus3 = adds3 4
+--the above one looks cool but what is an example of a use case that makes using such a trick useful?
+--also isn't the above thing partially applied function?
+
+--using the adds3 in for a list using map
+threePlusList = map adds3 [1,2,3,4,5]
+
 --main function
 main = do
     putStrLn "What is ur name?"
