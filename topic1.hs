@@ -1,6 +1,6 @@
 import Data.List
 import System.IO
-
+import qualified FirstModule
 --tuples can have elements of different types
 randomTuple = (1, "Random Tuple")
 
@@ -187,6 +187,7 @@ getClass n = case n of
 -- here the underscore is the default case
 --the "of" makes it look confusing. what is the purpose of "of" here?
 
+getClassFromModule x = FirstModule.getClass x
 --continue watching it from 57 minutes or 56 maybe
 
 --main function
