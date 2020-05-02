@@ -253,7 +253,47 @@ sumValue2 = putStrLn.show $ 1 +2
 areaOfCircle = area (Circle 60 60 20)
 areaOfRect = area $ Rectangle 10 10 100 100
 
---continue watching it from 57 minutes
+--type classes
+--some examples of type classes are Num, Eq, Or, Show
+--type classes correspond to sets of types which have certain operations defines for them
+--for example is addition operator (+) gonna work with parameters that use type num?
+--example of custom data type employee
+data Employee =  Employee { name :: String,
+                            position :: String,
+                            idNum :: Int
+                            } deriving (Eq, Show)
+
+--making some employees using the custom type
+samSmith = Employee {name = "Sam Smith", position = "Manager", idNum = 1000 }
+pamMarx = Employee {name = "Pam Marx", position = "Sales", idNum = 1001 }
+--now comparing both for equality
+isSamPam = samSmith == pamMarx
+--printing data for an employee
+samSmithData = show samSmith
+
+--another example
+data ShirtSize = S | M | L
+--uppercase because it is a type
+--what is the use of the keyword instance below?
+instance Eq ShirtSize where
+    S == S = True
+    M == M = True
+    L == L = True
+    _ == _ = False
+
+--here we have over-ridden the eq type class
+--now overriding show type class
+instance Show ShirtSize where
+    show S = "Small"
+    show M = "Medium"
+    show L = "Large"
+
+smallAvail = S `elem` [S, M, L]
+--does the above function require the instance of Eq class implemented for ShirtSize
+theSize = show S
+
+
+--continue watching it from 1 hour and 8 minutes
 
 --main function
 main = do

@@ -135,3 +135,11 @@ dot operator uses in Haskell
 
 what are type classes in Haskell?
 how are they different from enumerated types and custom types?
+
+what is Eq in Haskell?
+
+what are polymorphic types in Haskell?
+
+what is type instance in haskell?
+
+what is a custom type-class in Haskell?
