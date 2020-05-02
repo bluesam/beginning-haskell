@@ -206,6 +206,34 @@ barryBonds Infielder = False
 --now printing a value from the type
 barryOutfield = print (barryBonds Outfield)
 barryInfield = print (barryBonds Infielder)
+
+--custom types
+data Customer = Customer String  String Double
+    deriving Show
+--that means two string values and one double value
+--declaring a customer
+tomSmith :: Customer
+tomSmith = Customer "Tom Smith" "123 Main" 20.50
+--now getting a value from customer
+getBalance :: Customer -> Double
+getBalance (Customer _ _ b) = b
+--two dashes for the previous two values to be whatever possible
+
+--another enumerated data type example
+data RPS = Rock | Paper | Scissors
+
+shoot :: RPS -> RPS -> String
+shoot Paper Rock = "Paper Beats Rock"
+shoot Rock Scissors = "Rock Beats Scissors"
+shoot Scissors Paper = "Scissors Beat Paper"
+shoot Scissors Rock = "Scissors Loses to Rock"
+shoot Paper Scissors = "Paper Loses to Scissors"
+shoot Rock Paper = "Rock Loses to Paper"
+shoot _ _ = "Error"
+--so what exactly happened? are rock, paper and scissors different types in RPS
+--why does it throw an error instead of printing Error when wrong data is provided?
+
+
 --continue watching it from 57 minutes
 
 --main function
