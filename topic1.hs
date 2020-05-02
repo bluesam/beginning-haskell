@@ -187,7 +187,25 @@ getClass n = case n of
 -- here the underscore is the default case
 --the "of" makes it look confusing. what is the purpose of "of" here?
 
+--using something from a module
 getClassFromModule x = FirstModule.getClass x
+
+--enumerated types
+data BaseballPlayer = Pitcher
+                    | Catcher
+                    | Infielder
+                    | Outfield
+                deriving Show
+--the purpose of show is to convert the types to String for printing in console
+--the above are different types of baseball players. these could have been written on the same line
+--but this way improved the readability
+--now declaring a baseball player
+barryBonds :: BaseballPlayer -> Bool
+barryBonds Outfield =  True
+barryBonds Infielder = False
+--now printing a value from the type
+barryOutfield = print (barryBonds Outfield)
+barryInfield = print (barryBonds Infielder)
 --continue watching it from 57 minutes
 
 --main function

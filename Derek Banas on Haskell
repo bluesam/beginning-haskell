@@ -125,3 +125,6 @@ is there a switch in haskell? or is case used without the keyword switch?
 what are modules in Haskell?
 
 what are enumerated types? what are their uses?
+
+what are custom types? how are they struct like?
+what is the difference between custom types and enumerated types?
