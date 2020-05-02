@@ -128,3 +128,10 @@ what are enumerated types? what are their uses?
 
 what are custom types? how are they struct like?
 what is the difference between custom types and enumerated types?
+
+$ sign uses in Haskell
+
+dot operator uses in Haskell
+
+what are type classes in Haskell?
+how are they different from enumerated types and custom types?

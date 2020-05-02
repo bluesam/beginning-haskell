@@ -233,6 +233,25 @@ shoot _ _ = "Error"
 --so what exactly happened? are rock, paper and scissors different types in RPS
 --why does it throw an error instead of printing Error when wrong data is provided?
 
+--two versions of a type
+data Shape = Circle Float Float Float | Rectangle Float Float Float Float
+    deriving Show
+--for the circle, x, y and radius. for the rectangle upper left right and lower left right
+area :: Shape -> Float
+
+area (Circle _ _ r) = pi * r ^ 2
+area (Rectangle x y x2 y2) = (abs (x2-x)) * (abs (y2 - y))
+--could be simplified using $ sign
+--area (Rectangle x y x2 y2) = (abs $ x2-x) * (abs $ y2 - y)
+
+--dot operator
+sumValue = putStrLn (show (1+2))
+--it transfers the output of the right side function to the one on left side
+sumValue2 = putStrLn.show $ 1 +2
+
+--now getting area of shapes
+areaOfCircle = area (Circle 60 60 20)
+areaOfRect = area $ Rectangle 10 10 100 100
 
 --continue watching it from 57 minutes
 
