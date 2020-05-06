@@ -292,8 +292,52 @@ smallAvail = S `elem` [S, M, L]
 --does the above function require the instance of Eq class implemented for ShirtSize
 theSize = show S
 
+class MyEq a where
+    areEqual :: a -> a -> Bool
 
---continue watching it from 1 hour and 8 minutes
+instance MyEq ShirtSize where
+    areEqual S S = True
+    areEqual M M = True
+    areEqual L L = True
+    areEqual _ _ = False
+
+newSize = areEqual M M
+
+--writing to a file
+--for example lets take some input from the user
+sayHello = do
+    putStrLn "what is your name"
+    name <- getLine
+    putStrLn $ "Hello " ++ name
+
+writeToFile = do
+    theFile <- openFile "test.txt" WriteMode
+    hPutStrLn theFile("Random line of code")
+    hClose theFile
+--WriteMode just like ReadMode and don't forget to close the file for reasons that I don't know why.
+--yeah, why close it?
+
+readFromFile = do
+    theFile2 <- openFile "test.txt" ReadMode
+    contents <- hGetContents theFile2
+    putStr contents
+    hClose theFile2
+--and that was how to read from a file
+
+--how do I call use the return value of a function and use that to write to a file?
+
+--some interesting way to do fibonacci series in Haskell
+fib = 1 : 1 : [a + b | (a,b) <- zip fib (tail fib)]
+-- the operator : is used for list insertion. you first provide it some values and then the list to add the values to
+--this function works because fibonacci series can be added to itself after some element shifting to make
+--a fibonacci series!
+--but how can it add two fibonacci series together when it does not even know what fibonacci series is?
+--so definitely that is not the case.
+--or maybe that is the case.
+--if that is the case that it means it is constantly zipping.
+--it is definitely lazy evaluation. but is it also partial application of functions?
+
+--continue watching it from 1 hour and 12 minutes
 
 --main function
 main = do
