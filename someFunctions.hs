@@ -94,5 +94,61 @@ mult x y z = x * y * z
 
 --how is Haskell optimized for curried functions?
 
+--what are polymorphic functions?
+--what are concrete types?
+--what are type variables?
+--what are generics, especially in java?
+--type variables start with a lower case and types start with an upper case
+--type variables can be instantiated to different types in different circumstances
 
---start from types and classes part 3
+--the type signature of a function can tell us a little about what the function might be doing or how it works
+--how to handle empty array exception when the return type is supposed to be an array?
+--or to add on to that, how to return null or something of a different type than in the normal cases?
+--what is the use of id function in Haskell?
+
+--research paper to read: Philip Wadler - Theorems for Free
+
+--what are overloaded functions in Haskell?
+--how do you restrict the type of values a function can receive and process?
+
+--what is the type of [tail, init, reverse] ?
+--by using :t on the above, it is a list of a functions that receive and return a list
+--do all the function in a list of functions must have the same type signature?
+
+--this function applies a given function to a given value twice
+applyTwice f x = f (f x)
+
+--why shouldn't the humans do the type checking? why rely on the compiler for it?
+
+--the haskell98 report seems old and deprecated, is there a newer report to check?
+--it is recommended to understand Chapter 3 from Programming in Haskell by Graham Hutton by reading
+--chapters 3, 4 and 6 from the Haskell Language Specification.
+
+--:t vs :type in ghci
+
+--is it true that there are no statements in Haskell?
+
+--what is the use of signum function?
+--how to write code with brevity in python and C++?
+
+--what is meant by pattern matching?
+
+--this below one evaluates the both variables
+--(&&) :: Bool -> Bool -> Bool
+--True && True = True
+-- _ && _ = False
+
+--on the other hand this one only evaluates the first argument(for the false condition), thus being more efficient
+--(&&) :: Bool -> Bool -> Bool
+--True && b = b
+-- False && _ = False
+
+--patterns are matched in order kind of like if and else so be careful with the order. left to right and top to bottom
+--and you can't repeat variables, for example b && b = b
+
+--internally every non empty list is constructed using repeated use of (:) called cons
+--i.e [1,2,3,4] means 1:(2:(3:(4:([])))). in pattern matching code, the later syntax is used
+--for the pattern for lists, don't forget to use parenthesis.
+
+
+--start from defining functions, part 2
