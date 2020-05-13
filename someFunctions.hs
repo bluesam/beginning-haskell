@@ -124,7 +124,7 @@ applyTwice f x = f (f x)
 --it is recommended to understand Chapter 3 from Programming in Haskell by Graham Hutton by reading
 --chapters 3, 4 and 6 from the Haskell Language Specification.
 
---:t vs :type in ghci
+-- :t vs :type in ghci
 
 --is it true that there are no statements in Haskell?
 
@@ -150,5 +150,37 @@ applyTwice f x = f (f x)
 --i.e [1,2,3,4] means 1:(2:(3:(4:([])))). in pattern matching code, the later syntax is used
 --for the pattern for lists, don't forget to use parenthesis.
 
+--in haskell conditionals are expressions not statements. what is the difference between the two?
 
---start from defining functions, part 2
+--Lambda functions have this type of syntax
+--   \x = x + x
+--they are expressions function type
+
+--what is the difference between closures and lambda expressions?
+
+--lambda function can be used to avoid inventing names if the function is used just once
+--lambda functions are especially useful when currying functions because of the better expression of intent
+
+--add x y = x+y is a syntactic sugar for
+--add = \x -> (\y -> x+y)
+--some people choose to not use the syntactic sugar to make it more readable
+
+--const function in Haskell
+
+--example of a function using lambda expression
+odds n = map (\x -> x*2 +1)[0..n-1]
+
+--what are sections in Haskell?
+--can functions be used in sections too or just operators can be used in sections?
+
+--task: make a function called safetail that is like tail but just works on empty lists too.
+--define it using conditional expressions, guarded equations and pattern matching
+
+--Dart has got optional typing.
+--what is the difference between asynchronous and synchronous execution?
+--what are some features of Dart that make it ahead of other programming languages?
+
+--how does this one hide the || operator import Prelude hiding ((||))?
+--short circuiting verses lazy evaluation?
+
+--start from list comprehensions part 1
