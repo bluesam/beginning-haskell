@@ -184,3 +184,4 @@ odds n = map (\x -> x*2 +1)[0..n-1]
 --short circuiting verses lazy evaluation?
 
 --start from list comprehensions part 1
+--just a comment to tell the world that I am back
